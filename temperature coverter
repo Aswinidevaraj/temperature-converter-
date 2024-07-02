@@ -1,0 +1,11 @@
+def convert_temperature(temperature, scale):
+  if scale == 'c':
+    return (temperature * 9/5) + 32
+  elif scale == 'f':
+    return (temperature - 32) * 5/9
+  else:
+    raise ValueError('Invalid scale.')
+temperature = float(input('Enter the temperature: '))
+scale = input('Enter the scale (c or f): ')
+converted_temperature = convert_temperature(temperature, scale)
+print('The converted temperature is', converted_temperature)
